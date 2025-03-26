@@ -1,2 +1,2 @@
-# this is required for bzlws to work
-build --enable_runfiles
+build --repo_env=BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN=1
+build --incompatible_enable_cc_toolchain_resolution

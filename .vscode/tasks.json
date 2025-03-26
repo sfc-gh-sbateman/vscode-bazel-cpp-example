@@ -10,14 +10,6 @@
 			}
 		},
 		{
-			"label": "bazel run //:copy_vscode_config_files",
-			"command": "bazel",
-			"args": ["run", "//:copy_vscode_config_files"],
-			"runOptions": {
-				"runOn": "folderOpen"
-			}
-		},
-		{
 			"label": "build //example_bin:example_bin",
 			"command": "bazel",
 			"args": ["build", "//example_bin:example_bin"],

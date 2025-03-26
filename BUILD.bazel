@@ -1,4 +1,6 @@
-load("@bzlws//rules:bzlws_copy.bzl", "bzlws_copy")
+# This is a BUILD file that you can use to generate compile_commands.json
+# for your Bazel project. This is useful for enabling autocomplete in your
+# editor of choice.
 load("@hedron_compile_commands//:refresh_compile_commands.bzl", "refresh_compile_commands")
 
 # Alternatively you can run `bazel run @hedron_compile_commands//:refresh_all`
@@ -10,19 +12,5 @@ refresh_compile_commands(
         # List out your binary targets you want to have compile_commands.json
         # for in order to have autocomplete working correctly.
         "//example_bin": "",
-    },
-)
-
-bzlws_copy(
-    name = "copy_vscode_config_files",
-    out = ".vscode/{BASENAME}.json",
-    srcs = [
-        "//.vscode:launch.json-tpl",
-    ],
-    substitutions = {
-        "@bzlws//info:execution_root": "__EXEC_ROOT__",
-        "@bzlws//info:bazel-bin": "__BAZEL_BIN__",
-        "@bzlws//info:workspace": "__WORKSPACE__",
-        "@bzlws//info:output_base": "__OUTPUT_BASE__",
     },
 )
