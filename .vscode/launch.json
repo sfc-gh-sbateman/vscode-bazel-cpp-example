@@ -1,0 +1,16 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "//example_bin:example_bin",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/bazel-bin/example_bin/example_bin",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"preLaunchTask": "build //example_bin:example_bin",
+		}
+  ]
+}
