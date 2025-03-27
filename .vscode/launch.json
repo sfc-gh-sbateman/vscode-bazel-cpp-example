@@ -8,10 +8,11 @@
 			"program": "${workspaceFolder}/bazel-bin/example_bin/example_bin",
 			"args": [],
 			"stopAtEntry": false,
-			"cwd": "${workspaceFolder}",
+			"cwd": "${workspaceFolder}/bazel-bin/example_bin/example_bin.runfiles/__main__",
 			"environment": [],
 			"preLaunchTask": "build //example_bin:example_bin",
 			"MIMode": "gdb",
+			"externalConsole": false,
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
