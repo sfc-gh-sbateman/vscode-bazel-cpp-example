@@ -4,7 +4,7 @@
 		{
 			"label": "build //example_bin:example_bin",
 			"command": "bazel",
-			"args": ["build", "//example_bin:example_bin"],
+			"args": ["build", "--compilation_mode=dbg", "//example_bin:example_bin"],
 			"problemMatcher": []
 		}
   ]
