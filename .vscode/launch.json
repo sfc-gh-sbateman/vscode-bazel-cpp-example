@@ -7,17 +7,18 @@
 			"request": "launch",
 			"program": "${workspaceFolder}/bazel-bin/example_bin/example_bin",
 			"args": [],
-			"stopAtEntry": false,
+			"stopAtEntry": true,
 			"cwd": "${workspaceFolder}/bazel-bin/example_bin/example_bin.runfiles/__main__",
 			"environment": [],
 			"preLaunchTask": "build //example_bin:example_bin",
 			"MIMode": "gdb",
-			"externalConsole": false,
+			"miDebuggerPath": "/opt/rh/devtoolset-10/root/usr/bin/gdb",
+			"externalConsole": true,
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
-                    "ignoreFailures": false
+                    "ignoreFailures": true
                 }
             ]
 		}
