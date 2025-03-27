@@ -2,14 +2,6 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "bazel run //:copy_compile_commands",
-			"command": "bazel",
-			"args": ["run", "//:copy_compile_commands"],
-			"runOptions": {
-				"runOn": "folderOpen"
-			}
-		},
-		{
 			"label": "build //example_bin:example_bin",
 			"command": "bazel",
 			"args": ["build", "//example_bin:example_bin"],
