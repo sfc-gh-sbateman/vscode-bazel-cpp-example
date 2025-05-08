@@ -6,6 +6,12 @@ http_archive(
     strip_prefix = "bazel-compile-commands-extractor-4f28899228fb3ad0126897876f147ca15026151e",
 )
 
+http_archive(
+    name = "googletest",
+    urls = ["https://github.com/google/googletest/archive/release-1.11.0.zip"],
+    strip_prefix = "googletest-release-1.11.0",
+)
+
 load("@hedron_compile_commands//:workspace_setup.bzl", "hedron_compile_commands_setup")
 hedron_compile_commands_setup()
 load("@hedron_compile_commands//:workspace_setup_transitive.bzl", "hedron_compile_commands_setup_transitive")
